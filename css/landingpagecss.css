@@ -1,0 +1,51 @@
+body{
+    background-color: aquamarine;
+    overflow-y: hidden;
+}
+
+#leaderboard{
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+#leaderboard_button:visited, #leaderboard_button:link{
+    text-decoration: none;
+    background-color: red;
+    padding:14px 25px ;
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+}
+
+#subjects{
+    padding-top: 50px;
+    padding-right: 30px;
+    float: right;
+    display:inline-block;
+    width: 500px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.subject_button:visited, .subject_button:link{
+    text-decoration: none;
+    background-color: blue;
+    padding: 20px 25px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#invite{
+    padding-left: 30px;
+    padding-top:400px;
+}
+
+#invite_button:visited, #invite_button:link{
+    text-decoration: none;
+    background-color: coral;
+    padding:14px 25px ;
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+}

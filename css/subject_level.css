@@ -1,0 +1,25 @@
+body{
+    overflow-y: hidden;
+    background-color: khaki;
+}
+
+#title{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-size: 70px;
+}
+
+#subject_levels{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.levels:visited, .levels:link{
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    padding: 20px 25px;
+    font-size: 20px;
+}
