@@ -29,12 +29,14 @@ $(document).ready(function () {
     
       
 
-if(data.subject == "english"){
-    
+console.log(data.subject);
+    let url2 = "https://study-00ab.restdb.io/rest/" + data.subject;
+
+    console.log(url2);
     let settings = {
         "async": true,
         "crossDomain": true,
-        "url": "https://study-00ab.restdb.io/rest/english",
+        "url": url2,
         "method": "GET", //[cher] we will use GET to retrieve info
         "headers": {
           "content-type": "application/json",
@@ -45,7 +47,7 @@ if(data.subject == "english"){
     
     $.ajax(settings).done(function (response) {
         
-        
+        console.log(response);
         for(var i = 0; i<response.length; i++){
             if(response[i].level == data.level){
                 console.log(response[i]);
@@ -242,7 +244,8 @@ if(data.subject == "english"){
       
       
 
-}
+
+
 })
 
 
