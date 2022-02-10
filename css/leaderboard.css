@@ -1,7 +1,23 @@
+body{
+    background-image: url("../images/1108907.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    font-size: 20px;
+}
+
 .table-responsive{
-    margin-left: 300px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.822);
+    margin-top: 5%;
+    margin-left: 18%;
     max-width: 1000px;
 }
+
 .jumbotron{
     background-color: khaki;
+}
+#homebutton{
+    float:right;
+    margin-right: 2%;
 }

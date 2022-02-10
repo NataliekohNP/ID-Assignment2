@@ -1,6 +1,10 @@
 body{
     overflow-y: hidden;
-    background-color: khaki;
+    background-image: url("../images/1161890.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+    font-size: 20px;
 }
 
 #title{

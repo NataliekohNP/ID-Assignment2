@@ -9,12 +9,15 @@
     <link rel="stylesheet" href="../css/leaderboard.css">
 </head>
 <body>
-    <div class="jumbotron text-center">
-        <h1>Leaderboard</h1>
-    </div>
-    
-    <div class="table-responsive table-bordered">
+    <div class="table-responsive table-bordered" id="table1">
         <table class="table">
+            <thead>
+                <tr>
+                    
+                    <th colspan="3">Leaderboard</th>
+                    
+                </tr>
+            </thead>
             <thead>
                 <tr>
                     <th>Position</th>
@@ -24,11 +27,7 @@
             </thead>
             <tbody >
                 <tr class="body">
-<<<<<<< HEAD
                     <td >1</td>
-=======
-                    <td>1</td>
->>>>>>> bf901d429b80fa97f3f5f4887aa35303dc1e1ffc
                     <td id="username1"></td>
                     <td id="score1"></td>
                 </tr>
@@ -68,7 +67,10 @@
             </tbody>
         </table>    
     </div>
-
+    <div>
+        <br>
+        <button id="homebutton">Home</button>
+    </div>
 
 
 </body>

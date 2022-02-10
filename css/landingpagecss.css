@@ -1,11 +1,14 @@
 body{
-    background-color: aquamarine;
+    background-image: url("../images/1161814.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
     overflow-y: hidden;
+    font-size: 20px;
 }
 
 #leaderboard{
-    padding-top: 30px;
-    padding-left: 30px;
+    padding-top: 3%;
+    padding-left: 4.5%;
 }
 
 #leaderboard_button:visited, #leaderboard_button:link{
@@ -18,7 +21,7 @@ body{
 }
 
 #subjects{
-    padding-top: 50px;
+    padding-top: 6%;
     padding-right: 30px;
     float: right;
     display:inline-block;
@@ -36,16 +39,3 @@ body{
     flex-direction: column;
 }
 
-#invite{
-    padding-left: 30px;
-    padding-top:400px;
-}
-
-#invite_button:visited, #invite_button:link{
-    text-decoration: none;
-    background-color: coral;
-    padding:14px 25px ;
-    color: white;
-    display: inline-block;
-    font-size: 20px;
-}

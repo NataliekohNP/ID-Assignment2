@@ -18,6 +18,12 @@ $(document).ready(function () {
           "cache-control": "no-cache"
         }
       }
+
+      $("#homebutton").on("click", function(e){
+        e.preventDefault();
+        window.location.href="../html/landingpage.html?id="+data.id;
+      
+      })
       
       $.ajax(settings).done(function (response) {
         console.log(response);
@@ -30,8 +36,7 @@ $(document).ready(function () {
                 username = response[i].Username;
             }
           }
-          userlist.sort();
-          userlist.reverse();
+        userlist.sort((a,b) => b[0] - a [0]);
         document.getElementById("username1").innerHTML = userlist[0][1];
         document.getElementById("score1").innerHTML = userlist[0][0];
 

@@ -54,4 +54,9 @@ var settings = {
     });
   }
   
+  $("#done").on("click", function(e){
+    e.preventDefault();
+    window.location.href="../html/landingpage.html?id="+data.id;
+  
+  })
 })
