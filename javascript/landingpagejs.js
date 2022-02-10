@@ -8,6 +8,10 @@ $(document).ready(function () {
         data[tmp[0]] = tmp[1];
     }
     id=data.id
+    $("#leaderboard").on("click", function(e){
+      e.preventDefault();
+      window.location.href = "leaderboard.html?id="+id;
+    })
     $("#english").on("click", function(e){
         e.preventDefault();
         let url = "subject_level.html?subject=english&id="+id;

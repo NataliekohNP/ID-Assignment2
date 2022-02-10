@@ -4,7 +4,7 @@ var btn = document.getElementById("qn1bttn");
 var span = document.getElementsByClassName("close")[0];
 
 var modal2 = document.getElementById("myModal2");
-var btn2 = document.getElementById("qn2bttn");
+const btn2 = document.getElementById("qn2bttn");
 var span2 = document.getElementsByClassName("close2")[0];
 
 var modal3 = document.getElementById("myModal3");
@@ -193,6 +193,7 @@ console.log(data.subject);
                    document.getElementById("answer").innerHTML = "Correct";
                    $("#myModal1").fadeOut(600);
                    console.log(points);
+                   btn2.removeAttribute("disabled");
                }
                else{
                    
@@ -216,6 +217,7 @@ console.log(data.subject);
                    document.getElementById("answer2").innerHTML = "Correct";
                    $("#myModal2").fadeOut(600);
                    console.log(points);
+                   btn3.removeAttribute("disabled");
                }
                else{
                    
@@ -243,6 +245,7 @@ console.log(data.subject);
                    document.getElementById("answer3").innerHTML = "Correct";
                    $("#myModal3").fadeOut(600);
                    console.log(points);
+                   btn4.removeAttribute("disabled");
                }
                else{
                    
@@ -256,7 +259,7 @@ console.log(data.subject);
             }
         }
       })
-
+let finished = false;
       $("#submit4").on("click", function(e){
         e.preventDefault();
         var options = document.getElementsByName('option4');
@@ -264,9 +267,10 @@ console.log(data.subject);
             if(options[i].checked){
                if(options[i].value == response[levelnum[3]].answers) {
                    points ++;
-                   document.getElementById("answer4").innerHTML = "Correct";
                    $("#myModal4").fadeOut(600);
                    console.log(points);
+                   finished = true;
+                   addpoints();
                }
                else{
                    
@@ -289,46 +293,44 @@ console.log(data.subject);
      
       $("#back").on("click", function(e){
         
-        var settings = {
-            "async": true,
-            "crossDomain": true,
-            "url": "https://userdata-6076.restdb.io/rest/userlogin",
-            "method": "GET",
-            "headers": {
-              "content-type": "application/json",
-              "x-apikey": "61fb6b74fd4d376be83fe021",
-              "cache-control": "no-cache"
-            }
-          }
-          
-          
-          
-          $.ajax(settings).done(function (response) {
-            for (var i = 0; i < response.length; i++) {
-              
-                if(data.id == response[i]._id){
-                  username = response[i].Username;
-                  password = response[i].Password;
-                  email = response[i].Email;
-                  
-                }
-              }
-             
-            id = data.id;
-            updateDetails(id,username, password, email);
-            
-          });
-          
-              
-            //[STEP 7]: Create our AJAX settings
-           
-        
-        
-
-          
-    
-        
+        addpoints();
+  
       });
+
+
+      function addpoints(){
+        var settings = {
+          "async": true,
+          "crossDomain": true,
+          "url": "https://userdata-6076.restdb.io/rest/userlogin",
+          "method": "GET",
+          "headers": {
+            "content-type": "application/json",
+            "x-apikey": "61fb6b74fd4d376be83fe021",
+            "cache-control": "no-cache"
+          }
+        }
+        
+        
+        
+        $.ajax(settings).done(function (response) {
+          for (var i = 0; i < response.length; i++) {
+            
+              if(data.id == response[i]._id){
+                username = response[i].Username;
+                password = response[i].Password;
+                email = response[i].Email;
+                
+              }
+            }
+           
+          id = data.id;
+          updateDetails(id,username, password, email);
+          
+        });
+      }
+
+     
 
       function updateDetails(id,username, password, email){
           console.log(points);
@@ -342,7 +344,7 @@ console.log(data.subject);
             "async": true,
             "crossDomain": true,
             "url": "https://userdata-6076.restdb.io/rest/userlogin/"+id,
-            "method": "PUT", //[cher] we will use GET to retrieve info
+            "method": "PUT", 
             "headers": {
               "content-type": "application/json",
               "x-apikey": "61fb6b74fd4d376be83fe021",
@@ -354,38 +356,18 @@ console.log(data.subject);
           }
           $.ajax(settings3).done(function (response) {
               console.log(response);
-              url = "../html/landingpage.html?id="+data.id;
-              window.location.href = url;
+              if(finished = false){
+                url = "../html/landingpage.html?id="+data.id;
+                window.location.href = url;
+              }
+              else{
+                window.location.href = "../html/completion.html?subject="+data.subject+"&id="+data.id;
+              }
+              
             });
       }
 
-if(points == 4){
-    var settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://userdata-6076.restdb.io/rest/userlogin",
-        "method": "GET",
-        "headers": {
-          "content-type": "application/json",
-          "x-apikey": "61fb6b74fd4d376be83fe021",
-          "cache-control": "no-cache"
-        }
-      }
-      
-      $.ajax(settings).done(function (response) {
-        console.log(response);
-        for (var i = 0; i < response.length; i++) {
-          
-            if(id == response[i]._id){
-              response[i].points = points;
-            }
-          }
-    
-      });
 
-    url = "../html/landingpage.html?id="+data.id;
-    
-}
 
     
     });
