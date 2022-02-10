@@ -67,8 +67,13 @@ Content
 The text for section Y was copied from the Wikipedia article Z
 
 Media
-
-The photos used in this site were obtained from ...
+background-images:
+login -https://wall.alphacoders.com/big.php?i=1110488
+leaderboard image- https://wall.alphacoders.com/big.php?i=110890
+level- https://wall.alphacoders.com/big.php?i=1161890
+completion - https://wall.alphacoders.com/big.php?i=1161816
+sign up- https://images7.alphacoders.com/117/thumbbig-1178448.webp
+landing - https://wall.alphacoders.com/big.php?i=1161814
 
 Acknowledgements
 
