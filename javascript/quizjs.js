@@ -17,6 +17,7 @@ var span4 = document.getElementsByClassName("close4")[0];
 let points = 0;
 let levelnum = [];
 let ques= "";
+
 $(document).ready(function () {
     var url = document.location.href,
     params = url.split('?')[1].split('&'),
@@ -25,7 +26,29 @@ $(document).ready(function () {
         tmp=params[i].split('=');
         data[tmp[0]] = tmp[1];
     }
+    let settings2 = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://userdata-6076.restdb.io/rest/userlogin",
+        "method": "GET",
+        "headers": {
+          "content-type": "application/json",
+          "x-apikey": "61fb6b74fd4d376be83fe021",
+          "cache-control": "no-cache"
+        }
+      }
+      
+      $.ajax(settings2).done(function (response) {
+        console.log(response);
+        for (var i = 0; i < response.length; i++) {
+          
+            if(data.id == response[i]._id){
+              points = response[i].points;
+              console.log(points);
+            }
+          }
     
+      });
     
       
 
@@ -68,6 +91,7 @@ console.log(data.subject);
             document.getElementById('option1_2').value = response[levelnum[0]].option1;
             document.getElementById('option1_3').value = response[levelnum[0]].option2;
             document.getElementById('option1_4').value = response[levelnum[0]].option3;
+            document.getElementById("answer").innerHTML ="";
         }
         
         span.onclick=function() {
@@ -92,6 +116,8 @@ console.log(data.subject);
             document.getElementById('option2_2').value = response[levelnum[1]].answers;
             document.getElementById('option2_3').value = response[levelnum[1]].option2;
             document.getElementById('option2_4').value = response[levelnum[1]].option3;
+            document.getElementById("answer2").innerHTML ="";
+            
         }
         
         span2.onclick=function() {
@@ -116,6 +142,7 @@ console.log(data.subject);
             document.getElementById('option3_2').value = response[levelnum[2]].option3;
             document.getElementById('option3_3').value = response[levelnum[2]].option2;
             document.getElementById('option3_4').value = response[levelnum[2]].answers;
+            document.getElementById("answer3").innerHTML ="";
       }
       
       span3.onclick=function() {
@@ -141,6 +168,7 @@ console.log(data.subject);
             document.getElementById('option4_2').value = response[levelnum[3]].option3;
             document.getElementById('option4_3').value = response[levelnum[3]].option2;
             document.getElementById('option4_4').value = response[levelnum[3]].answers;
+            document.getElementById("answer4").innerHTML ="";
     }
     
     span4.onclick=function() {
@@ -169,6 +197,9 @@ console.log(data.subject);
                else{
                    
                    document.getElementById("answer").innerHTML = "The correct answer is : "+ response[levelnum[0]].answers;
+                   options[i].checked = false
+
+                   $("#myModal1").fadeOut(600);
                    break;
                }
             }
@@ -189,7 +220,13 @@ console.log(data.subject);
                else{
                    
                    document.getElementById("answer2").innerHTML = "The correct answer is : "+ response[levelnum[1]].answers;
+                   options[i].checked = false
+
+                   $("#myModal2").fadeOut(600);
+                   
+                   console.log(points);
                    break;
+                   
                }
                
             }
@@ -210,6 +247,9 @@ console.log(data.subject);
                else{
                    
                    document.getElementById("answer3").innerHTML = "The correct answer is : "+ response[levelnum[2]].answers;
+                   options[i].checked = false
+
+                   $("#myModal3").fadeOut(600);
                    break;
                }
                
@@ -231,12 +271,121 @@ console.log(data.subject);
                else{
                    
                    document.getElementById("answer4").innerHTML = "The correct answer is : "+ response[levelnum[3]].answers;
+                   options[i].checked = false
+
+                   $("#myModal4").fadeOut(600);
                    break;
                }
                
             }
         }
+
+
       })
+      let id = "";
+      let username = "";
+      let email = "";
+      let password = "";
+     
+      $("#back").on("click", function(e){
+        
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://userdata-6076.restdb.io/rest/userlogin",
+            "method": "GET",
+            "headers": {
+              "content-type": "application/json",
+              "x-apikey": "61fb6b74fd4d376be83fe021",
+              "cache-control": "no-cache"
+            }
+          }
+          
+          
+          
+          $.ajax(settings).done(function (response) {
+            for (var i = 0; i < response.length; i++) {
+              
+                if(data.id == response[i]._id){
+                  username = response[i].Username;
+                  password = response[i].Password;
+                  email = response[i].Email;
+                  
+                }
+              }
+             
+            id = data.id;
+            updateDetails(id,username, password, email);
+            
+          });
+          
+              
+            //[STEP 7]: Create our AJAX settings
+           
+        
+        
+
+          
+    
+        
+      });
+
+      function updateDetails(id,username, password, email){
+          console.log(points);
+        var jsondata={
+            "Username" : username,
+            "Email": email,
+            "Password":password,
+            "points": points
+        }
+        let settings3 = {
+            "async": true,
+            "crossDomain": true,
+            "url": "https://userdata-6076.restdb.io/rest/userlogin/"+id,
+            "method": "PUT", //[cher] we will use GET to retrieve info
+            "headers": {
+              "content-type": "application/json",
+              "x-apikey": "61fb6b74fd4d376be83fe021",
+              "cache-control": "no-cache"
+            },
+            "processData": false,
+            "data": JSON.stringify(jsondata)
+            
+          }
+          $.ajax(settings3).done(function (response) {
+              console.log(response);
+              url = "../html/landingpage.html?id="+data.id;
+              window.location.href = url;
+            });
+      }
+
+if(points == 4){
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://userdata-6076.restdb.io/rest/userlogin",
+        "method": "GET",
+        "headers": {
+          "content-type": "application/json",
+          "x-apikey": "61fb6b74fd4d376be83fe021",
+          "cache-control": "no-cache"
+        }
+      }
+      
+      $.ajax(settings).done(function (response) {
+        console.log(response);
+        for (var i = 0; i < response.length; i++) {
+          
+            if(id == response[i]._id){
+              response[i].points = points;
+            }
+          }
+    
+      });
+
+    url = "../html/landingpage.html?id="+data.id;
+    
+}
 
     
     });

@@ -8,20 +8,21 @@ $(document).ready(function () {
         data[tmp[0]] = tmp[1];
     }
     sbj = data.subject;
+    id=data.id;
     $("#primary").on("click", function(e){
         e.preventDefault();
-        let url = 'quiz.html?subject='+sbj+'&level=Primary';
+        let url = 'quiz.html?subject='+sbj+'&level=Primary&id='+id;
         window.location.href = url;
       })
 
       $("#secondary").on("click", function(e){
         e.preventDefault();
-        let url = 'quiz.html?subject='+sbj+'&level=Secondary';
+        let url = 'quiz.html?subject='+sbj+'&level=Secondary&id='+id;
         window.location.href = url;
       })
       $("#tertiary").on("click", function(e){
         e.preventDefault();
-        let url = 'quiz.html?subject='+sbj+'&level=Tertiary';
+        let url = 'quiz.html?subject='+sbj+'&level=Tertiary&id='+id;
         window.location.href = url;
       })
       

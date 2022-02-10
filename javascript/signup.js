@@ -22,15 +22,10 @@ $(document).ready(function () {
         adduser();
       })
 
-      let username = $("#name").val();
-      let email = $("#email").val();
-      let password = $("#password").val();
+    
 
-      let jsondata={
-          "Username" : username,
-          "Email": email,
-          "Password":password
-      }
+
+     
       function adduser(all = true) {
         let username = $("#name").val();
         let email = $("#email").val();
@@ -39,7 +34,8 @@ $(document).ready(function () {
         let jsondata={
             "Username" : username,
             "Email": email,
-            "Password":password
+            "Password":password,
+            "points":0
         };
         //[STEP 7]: Create our AJAX settings
         let settings = {

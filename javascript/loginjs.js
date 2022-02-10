@@ -35,6 +35,7 @@ var settings = {
         "cache-control": "no-cache"
       },
     }
+    let id = "";
     let loginsuccess = false;
     let username = $("#name").val();
     let password = $("#password").val();
@@ -46,12 +47,13 @@ var settings = {
       for (var i = 0; i < response.length; i++) {
           
         if((username == response[i].Username || username == response[i].Email) && password == response[i].Password){
-            loginsuccess = true;
+          id = response[i]._id;
+          loginsuccess = true;
         }
         
       }
       if(loginsuccess == true){
-          window.location.href = "../html/landingpage.html"
+          window.location.href = "../html/landingpage.html?id="+id;
       }
 
       //[STEP 9]: Update our HTML content
