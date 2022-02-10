@@ -64,7 +64,7 @@ If this section grows too long, you may want to split it off into a separate fil
 
 Content
 
-The text for section Y was copied from the Wikipedia article Z
+The quiz questions and answers are found in this website : https://www.testpapersfree.com/
 
 Media
 background-images:
