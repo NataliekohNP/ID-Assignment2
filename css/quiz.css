@@ -1,7 +1,16 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: green;
+    background-color: rgb(20,150,38);
+    background-image: url('../images/quiz_background.png');
+    background-size: cover ;
+    background-repeat: no-repeat;
     overflow-y: hidden;
+}
+
+#back{
+    background-color: rgb(135, 207, 186);
+    padding: 10px 12px;
+    font-size: 15px;
 }
 
 .modal {
@@ -86,7 +95,7 @@ body {
 
 #container4{
     padding-left: 70%;
-    padding-top: 3%;
+    padding-top: 1.5%;
 }
 
 #container3
@@ -96,13 +105,13 @@ body {
 }
 
 #container2{
-    padding-top: 6%;
+    padding-top: 5%;
     padding-left:60%;
 }
 
 #container1{
-    padding-top: 4%;
-    padding-left: 35%;
+    padding-top: 5%;
+    padding-left: 28%;
 }
 
 button{

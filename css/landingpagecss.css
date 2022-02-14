@@ -13,27 +13,44 @@ body{
 
 #leaderboard_button:visited, #leaderboard_button:link{
     text-decoration: none;
-    background-color: red;
+    background-color: rgba(138, 125, 177, 0.555);
     padding:14px 25px ;
     color: white;
     display: inline-block;
     font-size: 20px;
 }
 
+#container{
+    display:flex;
+    flex-direction: row;
+}
+
+.chara{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#characters{
+    display:flex;
+    flex-direction: row;
+    height: 200px;
+    width: 200px;
+}
+
 #subjects{
-    padding-top: 6%;
     padding-right: 30px;
     float: right;
     display:inline-block;
     width: 500px;
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
 }
 
 .subject_button:visited, .subject_button:link{
+    border: 2px solid rgba(203, 210, 253, 0.459);
     text-decoration: none;
-    background-color: blue;
-    padding: 20px 25px;
+    background-color: rgba(97, 63, 161, 0.733);
+    padding: 30px 25px;
     color: white;
     display: flex;
     flex-direction: column;

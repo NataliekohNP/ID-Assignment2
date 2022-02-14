@@ -18,6 +18,10 @@ body{
     background-color: khaki;
 }
 #homebutton{
+    background-color: rgba(204, 184, 184, 0.911);
     float:right;
     margin-right: 2%;
+    padding: 9px 12px;
+    color: rgb(34, 33, 32);
+
 }
