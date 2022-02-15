@@ -91,6 +91,7 @@ console.log(data.subject);
             document.getElementById('option1_2').value = response[levelnum[0]].option1;
             document.getElementById('option1_3').value = response[levelnum[0]].option2;
             document.getElementById('option1_4').value = response[levelnum[0]].option3;
+            document.getElementById("ann1").style.visibility="hidden";
             document.getElementById("answer").innerHTML ="";
         }
         
@@ -116,6 +117,7 @@ console.log(data.subject);
             document.getElementById('option2_2').value = response[levelnum[1]].answers;
             document.getElementById('option2_3').value = response[levelnum[1]].option2;
             document.getElementById('option2_4').value = response[levelnum[1]].option3;
+            document.getElementById("ann2").style.visibility="hidden";
             document.getElementById("answer2").innerHTML ="";
             
         }
@@ -142,6 +144,7 @@ console.log(data.subject);
             document.getElementById('option3_2').value = response[levelnum[2]].option3;
             document.getElementById('option3_3').value = response[levelnum[2]].option2;
             document.getElementById('option3_4').value = response[levelnum[2]].answers;
+            document.getElementById("ann3").style.visibility="hidden";
             document.getElementById("answer3").innerHTML ="";
       }
       
@@ -168,6 +171,7 @@ console.log(data.subject);
             document.getElementById('option4_2').value = response[levelnum[3]].option3;
             document.getElementById('option4_3').value = response[levelnum[3]].option2;
             document.getElementById('option4_4').value = response[levelnum[3]].answers;
+            document.getElementById("ann4").style.visibility="hidden";
             document.getElementById("answer4").innerHTML ="";
     }
     
@@ -184,16 +188,19 @@ console.log(data.subject);
 
     $("#submit1").on("click", function(e){
         e.preventDefault();
+        
         var options = document.getElementsByName('option1');
         for(i = 0; i<options.length; i++){
             if(options[i].checked){
                 
                if(options[i].value == response[levelnum[0]].answers) {
                    points ++;
-                   document.getElementById("answer").innerHTML = "Correct";
+                   document.getElementById("ann1").style.visibility="visible";
+                   document.getElementById("answer").style.visibility = "hidden";
                    $("#myModal1").fadeOut(600);
                    console.log(points);
                    btn2.removeAttribute("disabled");
+                   
                }
                else{
                    
@@ -214,10 +221,12 @@ console.log(data.subject);
             if(options[i].checked){
                if(options[i].value == response[levelnum[1]].answers) {
                    points ++;
-                   document.getElementById("answer2").innerHTML = "Correct";
+                   document.getElementById("ann2").style.visibility= "visible";
+                   document.getElementById("answer2").style.visibility = "hidden";
                    $("#myModal2").fadeOut(600);
                    console.log(points);
                    btn3.removeAttribute("disabled");
+                   
                }
                else{
                    
@@ -242,10 +251,12 @@ console.log(data.subject);
             if(options[i].checked){
                if(options[i].value == response[levelnum[2]].answers) {
                    points ++;
-                   document.getElementById("answer3").innerHTML = "Correct";
+                   document.getElementById("ann3").style.visibility="visible";
+                   document.getElementById("answer3").style.visibility = "hidden";
                    $("#myModal3").fadeOut(600);
                    console.log(points);
                    btn4.removeAttribute("disabled");
+                   
                }
                else{
                    
@@ -267,6 +278,8 @@ let finished = false;
             if(options[i].checked){
                if(options[i].value == response[levelnum[3]].answers) {
                    points ++;
+                   document.getElementById("ann4").style.visibility="visible";
+                   document.getElementById("answer4").style.visibility = "hidden";
                    $("#myModal4").fadeOut(600);
                    console.log(points);
                    finished = true;
@@ -314,6 +327,7 @@ let finished = false;
         
         
         $.ajax(settings).done(function (response) {
+          
           for (var i = 0; i < response.length; i++) {
             
               if(data.id == response[i]._id){
@@ -356,6 +370,7 @@ let finished = false;
           }
           $.ajax(settings3).done(function (response) {
               console.log(response);
+
               if(finished = false){
                 url = "../html/landingpage.html?id="+data.id;
                 window.location.href = url;
