@@ -22,7 +22,10 @@ $(document).ready(function () {
         adduser();
       })
 
-    
+      $("#login-submit").on("click", function(e){
+        e.preventDefault();
+        window.location.href="../html/login.html";
+      })
 
 
      

@@ -17,6 +17,11 @@ var settings = {
 
   });
   
+  $("#signup-submit").on("click", function(e){
+    e.preventDefault();
+    window.location.href="../html/signup.html";
+  })
+
   $("#login-submit").on("click", function(e){
     e.preventDefault();
     getUsers();

@@ -35,7 +35,7 @@ input[type=text] {
     background-color: rgba(105, 54, 247, 0.726);
     color: white;
   }
-  #signup{
+  #signup-submit{
     background-color: white; 
     color: #2462beb9; 
     border: 2px solid #2462beb9;
@@ -51,7 +51,7 @@ input[type=text] {
       color: white;
   }
   
-  #signup:hover {
+  #signup-submit:hover {
     background-color: #2462beb9;
     color: white;
   }
