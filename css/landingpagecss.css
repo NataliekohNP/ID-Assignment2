@@ -20,10 +20,6 @@ body{
     font-size: 20px;
 }
 
-#container{
-    display:flex;
-    flex-direction: row;
-}
 
 .chara{
     max-width: 100%;

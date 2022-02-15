@@ -4,6 +4,7 @@ body{
     background-size:cover;
     background-repeat: no-repeat;
     overflow-y: hidden;
+    background-attachment: fixed;
     font-size: 20px;
     background-color: rgb(33,44,108);
 }
@@ -23,14 +24,6 @@ body{
     justify-content: center;
 }
 
-.levels:visited, .levels:link{
-    text-decoration: none;
-    background-color: blue;
-    color: white;
-    padding: 20px 25px;
-    font-size: 20px;
-}
-
 input{
     font-size: large;
     border-color: rgb(96,117,196);
@@ -38,4 +31,33 @@ input{
     padding: 20px 30px;
     background-color:rgba(103, 123, 233, 0.808);
     color:rgb(232, 232, 247);
+}
+
+@media (max-width:576px)
+{
+    #title{
+        font-size: 40px;
+        margin-top: 30%;
+    }
+    
+
+    #subject_levels{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    input{
+        font-size: medium;
+        padding: 20px 40px;
+        margin-left: 40%;
+        margin-bottom:8px
+    }
+    
+}
+
+@media (max-width:320px){
+    input{
+        font-size: medium;
+        margin-left: 30%;
+    }
 }
