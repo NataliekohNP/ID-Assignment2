@@ -8,12 +8,14 @@ body {
     overflow-y: hidden;
 }
 
+/* Back button css */
 #back{
     background-color: rgb(135, 207, 186);
     padding: 10px 12px;
     font-size: 15px;
 }
 
+/* Css for question boxes */
 .modal {
   display: none; 
   position: fixed;
@@ -36,6 +38,7 @@ body {
   width: 80%;
 }
 
+ /* Css for each of the close buttons used for each question box*/
 .close {
   color: #aaaaaa;
   float: right;
@@ -89,11 +92,13 @@ body {
     cursor: pointer;
 }
 
+/* To reverse the order of the questions */
 #full_container{
     display:flex;
     flex-direction: column-reverse;
 }
 
+/* Positioning of each question bubble */
 #container4{
     padding-left: 70%;
     padding-top: 1.5%;
@@ -115,6 +120,7 @@ body {
     padding-left: 28%;
 }
 
+/* Making the css bubble */
 button{
     border: none;
     color: rgb(255, 255, 255);
@@ -129,6 +135,7 @@ button{
     border-radius: 50%;
 }
 
+/* Responsive css */
 @media (max-width:980px){
     body{
         background-image: url('../images/quiz_background_mobile.png');

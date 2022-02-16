@@ -9,6 +9,7 @@ body{
     background-color: rgb(33,44,108);
 }
 
+/* Css for the title in the middle of the page */
 #title{
     margin-top: 2%;
     text-align: center;
@@ -18,12 +19,14 @@ body{
     color: rgb(234, 234, 238);
 }
 
+  /* Ensuring that the options are arranged in the correct order with correct spacings */
 #subject_levels{
     display:flex;
     flex-direction: row;
     justify-content: center;
 }
 
+/* Css for the buttons/ options */
 input{
     font-size: large;
     border-color: rgb(96,117,196);
@@ -33,6 +36,7 @@ input{
     color:rgb(232, 232, 247);
 }
 
+/* Responsive css */
 @media (max-width:576px)
 {
     #title{

@@ -5,6 +5,8 @@ body{
     overflow-y: hidden;
     font-size: 20px;
 }
+
+/*Css for the box in the middle*/
 #container{
     background-color: rgba(255, 255, 255, 0.767);
     display: flex;
@@ -17,12 +19,16 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
+
+/*Changing the size of the input boxes*/
 input[type=text] {
     width: 100%;
     padding: 8px 20px;
     margin: 5px 0;
     box-sizing: border-box;
   }
+
+  /*Css for the login and signup buttons*/
   #sign-up-submit {
     background-color: white; 
     color: rgba(105, 54, 247, 0.726); 
@@ -42,13 +48,6 @@ input[type=text] {
     height: 50px;
     width: 48%;
     
-  }
-  a{
-    text-decoration: none;
-    color: #2462beb9;
-  }
-  a:hover{
-      color: white;
   }
   
   #login-submit:hover {
