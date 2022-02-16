@@ -40,6 +40,13 @@ Game walk through:
 # Testing
 testing is created in excel sheet
 
+# Github pages link
+https://nataliekohnp.github.io/ID-Assignment2/html/login.html
+
+# Roles and Contributions
+- Natalie : Javascript(AJAX) and html, and database (backend)
+- Hui xin : Html and CSS(frontend)
+
 # Credits
 
 Content
