@@ -15,6 +15,7 @@ $(document).ready(function () {
         
         var successsignup = false;
         $("#sign-up-submit").on("click", function(e){
+          successsignup = false;
           e.preventDefault();
           let username = $("#name").val();
           let email = $("#email").val();

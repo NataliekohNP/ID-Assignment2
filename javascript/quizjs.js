@@ -307,6 +307,7 @@ let finished = false;
 
 
       })
+      
       let id = "";
       let username = "";
       let email = "";
@@ -362,6 +363,7 @@ let finished = false;
             "Password":password,
             "points": points
         }
+        
         let settings3 = {
             "async": true,
             "crossDomain": true,
@@ -379,7 +381,7 @@ let finished = false;
           $.ajax(settings3).done(function (response) {
               console.log(response);
 
-              if(finished = false){
+              if(finished == false){
                 url = "../html/landingpage.html?id="+data.id;
                 window.location.href = url;
               }
