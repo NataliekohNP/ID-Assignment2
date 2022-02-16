@@ -27,13 +27,15 @@ $(document).ready(function () {
       })
       
       $.ajax(settings).done(function (response) {
-        console.log(response);
+        
         let userlist = [];
         let username = "";
         //stores the users username and points in the array to compare
-        for (var i = 0; i < response.length-1; i++) {
+        for (var i = 0; i < response.length; i++) {
             let users = [response[i].points,response[i].Username];
             userlist.push(users);
+            console.log(users);
+            console.log(i);
             if(data.id == response[i]._id){
                 username = response[i].Username;
             }
@@ -51,6 +53,7 @@ $(document).ready(function () {
         document.getElementById("score3").innerHTML = userlist[2][0];
           for(var x = 0; x < userlist.length; x++){
               console.log(username);
+              
               console.log(userlist[x][1]);
               if(username == userlist[x][1]){
                   document.getElementById("username-user").innerHTML = userlist[x][1];
