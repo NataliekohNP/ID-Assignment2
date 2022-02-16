@@ -40,6 +40,10 @@ Game walk through:
 # Testing
 testing is created in excel sheet
 
+# Github pages link
+https://nataliekohnp.github.io/ID-Assignment2/html/login.html
+
+
 # Credits
 
 Content
