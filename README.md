@@ -44,8 +44,8 @@ testing is created in excel sheet
 https://nataliekohnp.github.io/ID-Assignment2/html/login.html
 
 # Roles and Contributions
-- Natalie : Javascript and html
-- Hui xin : Html and CSS
+- Natalie : Javascript(AJAX) and html, and database (backend)
+- Hui xin : Html and CSS(frontend)
 
 # Credits
 
