@@ -28,37 +28,17 @@ Game walk through:
 7) Each land(subject) he completed the quizzes in, he is able to unlock a character. 
 8) The main point of the game is to unlock as many characters as possible and earn points
 9) The points will then be used for the leader board. 
-# Existing Features
 
-Users have to complete quizzes, by multiple choice questions to earn accessories for character
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
-# Features Left to Implement
-# Another feature idea
 # Technologies Used
-In this section, you should mention all of the languages, frameworks, libraries, and any other tools that you have used to construct this project. For each, provide its name, a link to its official site and a short sentence of why it was used.
-1) JQuery
-The project uses JQuery to simplify DOM manipulation.
+1) HTML
+2) Javascript
+3) CSS
+4) Ajax
+5) restdb.io
 
 # Testing
-
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
-
-Contact form:
-
-Go to the "Contact Us" page
-
-Try to submit the empty form and verify that an error message about the required fields appears
-
-Try to submit the form with an invalid email address and verify that a relevant error message appears
-
-Try to submit the form with all inputs valid and verify that a success message appears.
-
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+testing is created in excel sheet
 
 # Credits
 
@@ -68,13 +48,11 @@ The quiz questions and answers are found in this website : https://www.testpaper
 
 Media
 background-images:
-login -https://wall.alphacoders.com/big.php?i=1110488
-leaderboard image- https://wall.alphacoders.com/big.php?i=110890
-level- https://wall.alphacoders.com/big.php?i=1161890
-completion - https://wall.alphacoders.com/big.php?i=1161816
-sign up- https://images7.alphacoders.com/117/thumbbig-1178448.webp
-landing - https://wall.alphacoders.com/big.php?i=1161814
-
-Acknowledgements
-
-I received inspiration for this project from X
+- login background image -https://wall.alphacoders.com/big.php?i=1110488
+- leaderboard background image- https://wall.alphacoders.com/big.php?i=110890
+- subject level (Primary, secondary, tietiary) background wallpaper- https://wall.alphacoders.com/big.php?i=1161890
+- completion background picture - https://wall.alphacoders.com/big.php?i=1161816
+- sign up background picture- https://images7.alphacoders.com/117/thumbbig-1178448.webp
+- landing background picture - https://wall.alphacoders.com/big.php?i=1161814
+- landing page mobile background image - https://wallpaperaccess.com/genshin-impact-phone
+- quiz background image - https://wall.alphacoders.com/big.php?i=1161965
