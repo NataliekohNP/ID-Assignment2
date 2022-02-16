@@ -1,5 +1,5 @@
 body{
-    background-image: url('../images/1110488.jpg');
+    background-image: url('../images/login.jpg');
     background-size:cover;
     background-repeat: no-repeat;
     overflow-y: hidden;
@@ -14,8 +14,8 @@ body{
     margin: 10%;
     margin-top: 13%;
     max-width: 500px;
-    margin-left: 28%;
-    
+    margin-left: auto;
+    margin-right: auto;
 }
 input[type=text] {
     width: 100%;
@@ -28,20 +28,20 @@ input[type=text] {
     color: rgba(105, 54, 247, 0.726); 
     border: 2px solid #6936f7b9;
     height: 50px;
-    width: 40%;
+    width: 48%;
   }
   
   #login-submit:hover {
     background-color: rgba(105, 54, 247, 0.726);
     color: white;
   }
+
   #signup-submit{
     background-color: white; 
     color: #2462beb9; 
     border: 2px solid #2462beb9;
     height: 50px;
-    width: 40%;
-    
+    width: 48%; 
   }
   a{
     text-decoration: none;
@@ -56,4 +56,39 @@ input[type=text] {
     color: white;
   }
   
+@media (max-width:980px)
+{
+  body{
+    background-image: url('../images/login-mobile.png');
+    font-size: 60px;
+  }
+
+  #container{
+    padding: 10%;
+    margin: 10%;
+    margin-top: 50%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right:auto;
+  }
+  input[type=text] {
+    width: 100%;
+    padding: 30px 35px;
+    font-size: 45px;
+    margin: 5px 0;
+    box-sizing: border-box;
+  }
+
+  #login-submit {
+    font-size:40px;
+    height: 60px;
+    width: 48%;
+  }
+
+  #signup-submit{
+    font-size:40px;
+    height: 60px;
+    width: 48%;
+  }
+}
   

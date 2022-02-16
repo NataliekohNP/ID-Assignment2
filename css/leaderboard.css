@@ -14,9 +14,6 @@ body{
     max-width: 1000px;
 }
 
-.jumbotron{
-    background-color: khaki;
-}
 #homebutton{
     background-color: rgba(204, 184, 184, 0.911);
     float:right;

@@ -1,5 +1,5 @@
 body{
-    background-image: url("../images/1161816.jpg");
+    background-image: url("../images/completion.jpg");
     background-size:cover;
     background-repeat: no-repeat;
     overflow-y: hidden;
@@ -20,4 +20,11 @@ body{
     float:right;
     background-color: rgba(120, 29, 194, 0.733);
     color: white;
+}
+
+@media (max-width:980px)
+{
+    body{
+        background-image: url('../images/completion_mobile.png');
+    }
 }

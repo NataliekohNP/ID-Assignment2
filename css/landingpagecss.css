@@ -1,9 +1,8 @@
 body{
-    background-image: url("../images/1161814.jpg");
+    background-image: url("../images/landingpage.jpg");
     background-size:cover;
     background-repeat: no-repeat;
     overflow-y: hidden;
-    font-size: 20px;
 }
 
 #leaderboard{
@@ -62,3 +61,40 @@ body{
     flex-direction: column;
 }
 
+@media (max-width:980px)
+{
+    body{
+        background-image: url('../images/landingpage_mobile.jpg');
+    }
+    #container 
+    {
+        display:flex;
+        flex-direction: column;
+    }
+    #characters{
+        margin-top:10%;
+        width:500px;
+        height: 500px;
+        margin-left: 40px;
+    }
+    .chara{
+        margin-left:-100px
+    }
+    #subjects{
+        display:inline-block;
+        margin-top:10%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 300px;
+        width: 600px;
+        font-size: 55px;
+    }
+    #leaderboard_button:visited, #leaderboard_button:link{
+        padding:30px 35px ;
+        font-size: 35px;
+    }
+    #logout{
+        padding:30px 35px ;
+        font-size: 35px;
+    }
+}
