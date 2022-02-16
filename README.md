@@ -30,8 +30,6 @@ Game walk through:
 9) The points will then be used for the leader board. 
 
 
-# Features Left to Implement
-# Another feature idea
 # Technologies Used
 1) HTML
 2) Javascript
