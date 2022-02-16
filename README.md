@@ -10,9 +10,9 @@ A gaming application to make studying more fun for students. This game can help 
 
 Our website is for students who are struggling with studies and motivation to study. We want to achieve a more engaging and enjoyable learning experience for the users to have more motivation to study. The fantasy trope genre is one of the most popular themes of gaming in the industry now, thus we are using that theme to encourage students to study in a more enjoyable way which will be able to help them to see that studying can be fun. 
 # User case study:
-Mary loves to play Genshin Impact, she plays it often to the point that her grades are not good. This application can help her to study as she likes fantasy genre games. 
-John doesn’t like to study because he cannot focus on wordy textbooks. This game can help to content the information and give the main points, and quiz John after learning so that he can be able to understand and apply in the game
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory) Include the Adobe XD wireframe as a folder. You can include the XD share url.
+- Mary loves to play Genshin Impact, she plays it often to the point that her grades are not good. This application can help her to study as she likes fantasy genre games. 
+- John doesn’t like to study because he cannot focus on wordy textbooks. This game can help to content the information and give the main points, and quiz John after learning - so that he can be able to understand and apply in the game
+
 
 
 # Features
