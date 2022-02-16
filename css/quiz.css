@@ -1,9 +1,10 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(20,150,38);
-    background-image: url('../images/quiz_background.png');
+    background-color: rgb(27,23,48);
+    background-image: url('../images/quiz_background.jpg');
     background-size: cover ;
     background-repeat: no-repeat;
+
     overflow-y: hidden;
 }
 
@@ -117,7 +118,7 @@ body {
 button{
     border: none;
     color: rgb(255, 255, 255);
-    background-color: rgb(241, 172, 81);
+    background-color: rgb(192, 131, 228);
     padding: 20px;
     text-align: center;
     text-decoration: none;
@@ -126,4 +127,31 @@ button{
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 50%;
+}
+
+@media (max-width:980px){
+    body{
+        background-image: url('../images/quiz_background_mobile.png');
+    }
+    #container4{
+        padding-left: 70%;
+        padding-top: 15%;
+    }
+    
+    #container3
+    {
+        padding-top: 10%;
+        padding-left: 20%;
+    }
+    
+    #container2{
+        padding-top: 15%;
+        padding-left:60%;
+    }
+    
+    #container1{
+        padding-top: 10%;
+        padding-left: 28%;
+    }
+    
 }
