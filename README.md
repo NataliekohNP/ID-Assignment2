@@ -53,8 +53,11 @@ leaderboard background image- https://wall.alphacoders.com/big.php?i=110890
 subject level (Primary, secondary, tietiary) background wallpaper- https://wall.alphacoders.com/big.php?i=1161890
 completion background picture - https://wall.alphacoders.com/big.php?i=1161816
 sign up background picture- https://images7.alphacoders.com/117/thumbbig-1178448.webp
+
 landing background picture - https://wall.alphacoders.com/big.php?i=1161814
+
 landing page mobile background image - https://wallpaperaccess.com/genshin-impact-phone
+
 quiz background image - https://wall.alphacoders.com/big.php?i=1161965
 
 Acknowledgements
