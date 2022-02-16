@@ -1,4 +1,5 @@
 
+//this part is to var the modal so it can carry out the functions
 var modal = document.getElementById("myModal1");
 var btn = document.getElementById("qn1bttn");
 var span = document.getElementsByClassName("close")[0];
@@ -19,6 +20,7 @@ let levelnum = [];
 let ques= "";
 
 $(document).ready(function () {
+  //this is to get data from the url
     var url = document.location.href,
     params = url.split('?')[1].split('&'),
     data= {}, tmp;
@@ -26,6 +28,7 @@ $(document).ready(function () {
         tmp=params[i].split('=');
         data[tmp[0]] = tmp[1];
     }
+    //retrieve the user information from database(to get points)
     let settings2 = {
         "async": true,
         "crossDomain": true,
@@ -53,6 +56,7 @@ $(document).ready(function () {
       
 
 console.log(data.subject);
+//this is to retrieve information from the subject database(to retrieve questions)
     let url2 = "https://study-00ab.restdb.io/rest/" + data.subject;
 
     console.log(url2);
@@ -69,15 +73,17 @@ console.log(data.subject);
     }
     
     $.ajax(settings).done(function (response) {
-        
+        //here is to display the questions as well as the options. according to the subject level.
         console.log(response);
         for(var i = 0; i<response.length; i++){
             if(response[i].level == data.level){
+              //helps to filter out which questions are in the subject level
                 console.log(response[i]);
+                //gets the index of where the subject level is at
                 levelnum.push(i);
             }
         }
-        
+        //prints out the questions
         ques = response[levelnum[0]].questions
         btn.onclick = function() {
             modal.style.display = "block";
@@ -185,7 +191,7 @@ console.log(data.subject);
         }
     }
 
-
+//here is where to check whether the answer is correct according to database
     $("#submit1").on("click", function(e){
         e.preventDefault();
         
@@ -194,12 +200,14 @@ console.log(data.subject);
             if(options[i].checked){
                 
                if(options[i].value == response[levelnum[0]].answers) {
+                 
                    points ++;
                    document.getElementById("ann1").style.visibility="visible";
                    document.getElementById("answer").style.visibility = "hidden";
                    $("#myModal1").fadeOut(600);
                    console.log(points);
                    btn2.removeAttribute("disabled");
+                   btn.style.visibility = "hidden";
                    
                }
                else{
@@ -226,7 +234,7 @@ console.log(data.subject);
                    $("#myModal2").fadeOut(600);
                    console.log(points);
                    btn3.removeAttribute("disabled");
-                   
+                   btn2.style.visibility = "hidden";
                }
                else{
                    
@@ -256,7 +264,7 @@ console.log(data.subject);
                    $("#myModal3").fadeOut(600);
                    console.log(points);
                    btn4.removeAttribute("disabled");
-                   
+                   btn3.style.visibility = "hidden";
                }
                else{
                    
@@ -345,7 +353,7 @@ let finished = false;
       }
 
      
-
+//updates the points to the user database
       function updateDetails(id,username, password, email){
           console.log(points);
         var jsondata={

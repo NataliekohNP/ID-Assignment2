@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  //gets data from url
     var url = document.location.href,
     params = url.split('?')[1].split('&'),
     data= {}, tmp;
@@ -30,7 +31,7 @@ var settings = {
           
         }
       }
-      
+      //check which subject did the user complete, and show case the character they unlocked
       if(characterunlock == false){
         document.getElementById("wordsofaccomplishment").innerHTML = "Character unlocked!";
         if(data.subject == "english"){
@@ -46,7 +47,7 @@ var settings = {
           document.getElementById("completechar").src ="../images/chemistry_char.png";
         }
     
-        
+        //input the user and character data to database
         var jsondata = {"charactername": data.subject,"userid": data.id};
         var settings = {
           "async": true,
@@ -67,6 +68,7 @@ var settings = {
           
         });
       }
+      //if user has already unlocked the character
       else{
         document.getElementById("wordsofaccomplishment").innerHTML="Character unlocked already!";
         if(data.subject == "english"){
@@ -87,9 +89,9 @@ var settings = {
   
   
   
-  
+  //redirects the user back to the home page
  setTimeout(function () {
     
-    window.location.href = "../html/landingpage.html?id="+data.id; //will redirect to your blog page (an ex: blog.html)
+    window.location.href = "../html/landingpage.html?id="+data.id; 
  }, 4000);
 })

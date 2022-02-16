@@ -1,11 +1,13 @@
 let id = "";
 $(document).ready(function () {
+  //to hide all characters 
   document.getElementById("english2").style.visibility = "hidden";
   document.getElementById("maths2").style.visibility = "hidden";
   document.getElementById("biology2").style.visibility = "hidden";
   document.getElementById("chemistry2").style.visibility = "hidden";
-  var url = document.location.href,
-    params = url.split('?')[1].split('&'),
+  //gets user data from the url
+  var url = document.location.href;
+    params = url.split('?')[1].split('&');
     data= {}, tmp;
     for (var i= 0, l = params.length; i < l; i++){
         tmp=params[i].split('=');
@@ -23,7 +25,7 @@ $(document).ready(function () {
       "cache-control": "no-cache"
     }
   }
-  
+  //checks user have what character to show the characters they have unlocked
   $.ajax(settings).done(function (response) {
     console.log(response);
     for (var i = 0; i < response.length; i++) {
@@ -47,7 +49,7 @@ $(document).ready(function () {
       
     }
   });
-    
+    //redirects users to the pages they want to go
     $("#leaderboard_button").on("click", function(e){
       e.preventDefault();
       window.location.href = "leaderboard.html?id="+id;

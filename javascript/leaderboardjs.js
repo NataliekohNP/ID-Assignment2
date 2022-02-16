@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  //gets data from database
     var url = document.location.href,
     params = url.split('?')[1].split('&'),
     data= {}, tmp;
@@ -29,6 +30,7 @@ $(document).ready(function () {
         console.log(response);
         let userlist = [];
         let username = "";
+        //stores the users username and points in the array to compare
         for (var i = 0; i < response.length-1; i++) {
             let users = [response[i].points,response[i].Username];
             userlist.push(users);
@@ -36,6 +38,8 @@ $(document).ready(function () {
                 username = response[i].Username;
             }
           }
+        //shows the top three points in the game
+        //sorts the array according to the points
         userlist.sort((a,b) => b[0] - a [0]);
         document.getElementById("username1").innerHTML = userlist[0][1];
         document.getElementById("score1").innerHTML = userlist[0][0];
