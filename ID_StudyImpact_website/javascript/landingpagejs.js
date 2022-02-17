@@ -40,10 +40,10 @@ $(document).ready(function () {
           console.log("maths");
           document.getElementById("maths2").style.visibility = "visible";
         }
-        if(response[i].charactername == 'biology'){
+        if(response[i].charactername == 'science-biology'){
           document.getElementById("biology2").style.visibility = "visible";
         }
-        if(response[i].charactername == 'chemistry'){
+        if(response[i].charactername == 'science-chemistry'){
           document.getElementById("chemistry2").style.visibility = "visible";
         }
       }

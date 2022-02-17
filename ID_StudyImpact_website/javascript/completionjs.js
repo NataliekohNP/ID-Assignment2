@@ -40,11 +40,11 @@ var settings = {
         else if(data.subject == "maths"){
           document.getElementById("completechar").src = "../images/math_char.png";
         }
-        else if(data.subject == "chemistry"){
-          document.getElementById("completechar").src = "../images/biology_char.png";
+        else if(data.subject == "science-chemistry"){
+          document.getElementById("completechar").src = "../images/chemistry_char.png";
         }
-        else if(data.subject == "biology"){
-          document.getElementById("completechar").src ="../images/chemistry_char.png";
+        else if(data.subject == "science-biology"){
+          document.getElementById("completechar").src = "../images/biology_char.png";
         }
     
         //input the user and character data to database
@@ -77,11 +77,11 @@ var settings = {
         else if(data.subject == "maths"){
           document.getElementById("completechar").src = "../images/math_char.png";
         }
-        else if(data.subject == "chemistry"){
-          document.getElementById("completechar").src = "../images/biology_char.png";
+        else if(data.subject == "science-chemistry"){
+          document.getElementById("completechar").src = "../images/chemistry_char.png";
         }
-        else if(data.subject == "biology"){
-          document.getElementById("completechar").src ="../images/chemistry_char.png";
+        else if(data.subject == "science-biology"){
+          document.getElementById("completechar").src = "../images/biology_char.png";
         }
       }
     
